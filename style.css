@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background: white;
+    
+}
+
+/*navbar*/
+nav{
+    display: flex;
+    background-color: green;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: rgb(220, 255, 220);
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 1;
+    width: 100vw;
+}
+nav .logo{
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 2px;
+}
+nav .logo a{
+    text-decoration: none;
+    color: rgb(220, 255, 220);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: rgb(220, 255, 220);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+nav ul li a:hover{
+    color: rgb(220, 255, 220);
+    text-decoration: underline;
+}
+
+/* Hamburger Menu*/
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width:28px;
+    height: 3px;
+    background-color: rgb(220, 255, 220);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/*Hamburger Menu Animation*/
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+/*Responsive Breakpoint*/
+
+/*ukuran setengah layar*/
+@media screen and (max-width:768px) {
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top:0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        flex-direction: column;
+        background-color: green;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+
+    }
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.wrapper{
+    margin: auto;
+    position: relative;
+    
+}
+section{
+    margin: auto;
+    display: flex;
+    margin: 10px 50px 10px 50px;
+    min-height: 50vh;
+    
+}
+
+.kolom{ 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+.kolom .deskripsi{
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+    
+}
+h2{
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #F4A442;
+    width: 100%;
+    line-height: 50px;
+}
+p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+a.profilbatu{
+    text-decoration:none ;
+    background: #F4A442;
+    border-radius: 15px;
+    margin-top: 200px;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.profilbatu:hover{
+    background: green;
+}
+
+.tengah{
+    text-align: center;
+    width: 100%;
+}
+.berita-list{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.kartu-berita{
+    width: 20%;
+    margin: 0 auto;
+}
+.kartu-berita img{
+    width: 80%;
+    border-radius: 50%;
+}
+.kartu-berita p{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background-color: rgb(20, 20, 20);
+    height: auto;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 50px;
+    color: rgb(210, 210, 210);
+    
+    
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: rgb(210, 210, 210);
+}
+.socials a i{
+    font-size: 1.5rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: green;
+    cursor: pointer;
+}
+.footer-bottom{
+    background: black;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*PROFIL KOTA BATU*/

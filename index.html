@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Sistem Informasi Pariwisata Kota Batu</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCuHNl7KTuIBo3AM6ob1H54o9QNvmqrKoM&callback=viewMap"></script>
+    <script>
+        function initMap() {
+            var contentString = '<img src="img/wisatabatu.jpg">';
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -7.874321831763654, lng:112.52676703984748},
+                zoom: 10 
+             });
+            var marker = new google.maps.Marker({
+                position: {lat: -7.874321831763654, lng:112.52676703984748},
+                map: map,
+                animation: google.maps.Animation.BOUNCE,
+                title:"Kota Batu, Jawa Timur",
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content:contentString, position: {lat: -7.874321831763654, lng:112.52676703984748},
+            });
+            infowindow.open(map,marker); 
+        }
+        google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+   
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           <h4><a href="#home">Kota Wisata Batu</a></h4>
+        </div>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#wisata">Wisata</a></li>
+            <li><a href="#kuliner">Kuliner</a></li>
+            <li><a href="#berita">Berita</a></li>
+            <li><a href="#peta">Peta</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+    <div class="wrapper">
+        <!--start home-->
+        <section id="home">
+            <div class="kolom">
+                <img class="batu" src="img/pemerintahbatu.png" title="Pemerintah Kota Batu" style="width:100vw">
+            </div>
+        </section>
+        <!--end home-->
+
+        <!--start video-->
+        <section id="home">
+            <div class="tengah">
+                <div class="kolom">
+                    <p class="deskripsi">Pesona Kota Batu</p>
+                    <h2>Kota Batu, Swiss Kecil di Tanah Jawa</h2>
+                    <iframe width="894" height="520" src="https://www.youtube.com/embed/edptei61aIc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <!--start video-->
+
+        <!--start profil-->
+        <section id="profil">
+            <img class="batu" src="img/sloganbatu.jpg" title="Slogan Kota Batu" style="width:600px;height:600px;">
+            <div class="kolom" >
+                <p class="deskripsi">Pesona Indonesia </p>
+                <h2>The Shining Batu City</h2>
+                <p> Kota Batu adalah sebuah kota di Provinsi Jawa Timur, Indonesia. Kota ini terletak 90 km sebelah barat daya Surabaya atau 15 km sebelah barat laut Malang. Kota Batu dikenal sebagai <i>De Kleine Zwitserland</i> atau Swiss Kecil di Pulau Jawa berkat potensi keindahan alam yang luar biasa. </p>
+                <p><a href="profilbatu.html" class="profilbatu"> Profil Kota Batu</a></p>
+            </div>
+        </section>
+        <!--end profil-->
+                
+        <!--start wisata-->
+        <section id="wisata">
+            <div class="kolom">
+                <p class="deskripsi">Time to Travel</p>
+                <h2>Pariwisata Kota Batu</h2>
+                <p>Kota Batu merupakan kota yang menarik untuk dikunjungi. Jumlah kunjungan wisatawan ke kota ini termasuk salah satu yang terbesar di Indonesia. Objek wisata Kota Batu sangat beragam, mulai dari wisata alam, agrowisata, wisata perkemahan, wisata keluarga, wisata pendidikan, dan masih banyak lagi.</p>
+                <p>Kota Batu memiliki banyak akomodasi untuk menunjang kunjungan wisatawan.Dapat ditemukan dengan mudah tempat akomodasi mulai dari rumah singgah, villa, losmen, hingga hotel berbintang yang tersebar di beberapa titik strategis kota. </p>
+                <p>Tak hanya itu, Kota Batu juga memiliki beberapa pusat perbelanjaan mulai dari pusat perbelanjaan modern hingga pasar modern dan tradisional.</p>
+                <p><a href="wisatabatu.html" class="profilbatu"> Baca Selengkapnya</a></p>
+            </div>
+            <img src="https://image.freepik.com/free-vector/traveling-concept-illustration_114360-5843.jpg" >
+        </section>
+        <!--end wisata-->
+
+        <!--start kuliner-->
+        <section id="kuliner">
+            <img class="batu" src="https://image.freepik.com/free-vector/people-eating-their-food-table_23-2148473327.jpg" >
+            <div class="kolom" >
+                <p class="deskripsi">Time to Eat</p>
+                <h2>Kuliner Khas Kota Batu</h2>
+                <p> Berwisata ke Kota Batu sepertinya kurang lengkap jika tidak mencicipi aneka makanan khasnya yang nikmat dan menggoda. Sebab, ternyata Batu juga memiliki banyak kekayaan kuliner dengan rasa khas. </p>
+                <p>Kuliner khas Kota Batu sangatlah beragam jenisnya mulai dari cita rasa masakan khasnya, jajanan pasar, minuman, dan juga oleh-oleh khas.</p>
+                <p><a href="kuliner.html" class="profilbatu"> Baca Selengkapnya</a></p>
+            </div>
+        </section>
+        <!--end kuliner-->
+
+        <!--start berita-->
+        <section id="berita">
+            <div class="tengah">
+                <div class="kolom">
+                    <p class="deskripsi">News</p>
+                    <h2>Berita Terkini Kota Batu</h2>
+                </div>
+                <div class="berita-list">
+                    <div class="kartu-berita">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.S45tmpa8VuB6ENs8XITJ3AHaHa&pid=Api&P=0&w=177&h=177"title="Tempat Kuliner Kota Batu">
+                        <p>Tempat Kuliner Enak di Kota Batu</p>
+                        <p><a href="https://www.merdeka.com/gaya/10-lokasi-wisata-kuliner-populer-di-kota-batu.html" class="profilbatu"> Baca Sekarang</a></p>
+                    </div>
+                    <div class="kartu-berita">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSztAl2QYqU4W92xMNrC2Ut1YJ6kZon45X10w&usqp=CAU" title="Tempat Wisata Kota Batu">
+                        <p>Tempat Wisata Terkenal di Kota Batu</p>
+                        <p><a href="https://www.merdeka.com/gaya/21-objek-wisata-keluarga-populer-di-kota-batu-jawa-timur-kln.html" class="profilbatu"> Baca Sekarang</a></p>
+                    </div>
+                    <div class="kartu-berita">
+                        <img src="img/tvbatu.png" title="Logo Batu TV">
+                        <p>Stasiun Televisi Lokal di Kota Batu</p>
+                        <p><a href="http://batutelevisi.com/" class="profilbatu"> Baca Sekarang</a></p>
+                    </div>
+                    <div class="kartu-berita">
+                        <img src="img/pusat.jpg" title="Pusat Perbelanjaan Kota Batu">
+                        <p>Pusat Perbelanjaan Populer di Kota Batu</p>
+                        <p><a href="https://penginapan.net/mall-di-batu-malang/" class="profilbatu"> Baca Sekarang</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end berita-->
+
+        <!--start peta-->
+        <section id="peta">
+            <div class="kolom" >
+                <p class="deskripsi">Lokasi</p>
+                <h2>Kota Batu dalam Peta</h2>
+                <div id ="map"style="width: 235%;height: 520px;"></div>
+                
+            </div>
+        </section>
+        <!--end peta-->
+
+        <!--start footer-->
+        <section id="footer">
+            <footer>
+                <div class="footer-content">
+                    <h3> Sistem Informasi Pariwisata Kota Batu</h3>
+                    <p> Temukan Kami di Sosial Media</p>
+                    <ul class="socials">
+                        <li><a href="https://www.instagram.com/disparta_batu/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCQXusk338O6h8WLgdaxvftQ"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/DispartaKotaBatu/"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p> Copyright &copy;2021 | Kota Wisata Batu</p>
+                </div>
+            </footer>
+        </section>
+        <!--end footer-->
+    </div>
+</body>
+</html>
